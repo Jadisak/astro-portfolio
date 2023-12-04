@@ -1,0 +1,107 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+
+export async function getStaticPaths() {
+  return [
+    {
+      params: { projects: "crown" },
+      props: {
+        name: "Crown",
+        desc: "The project is a simple 'To-Do List' application built using React. Users can add, edit, and delete tasks from the list. The application is built using a single component that handles the rendering of the list and the form for adding new tasks. The component uses React's useState hook to manage the state of the tasks. Overall, it is a great introductory project for someone looking to learn React.",
+      },
+    },
+    {
+      params: { projects: "snowgod" },
+      props: {
+        name: "Snowgod",
+        desc: "The project is a simple 'To-Do List' application built using React. Users can add, edit, and delete tasks from the list. The application is built using a single component that handles the rendering of the list and the form for adding new tasks. The component uses React's useState hook to manage the state of the tasks. Overall, it is a great introductory project for someone looking to learn React.",
+      },
+    },
+    {
+      params: { projects: "godfire" },
+      props: {
+        name: "Godfire",
+        desc: "The project is a simple 'To-Do List' application built using React. Users can add, edit, and delete tasks from the list. The application is built using a single component that handles the rendering of the list and the form for adding new tasks. The component uses React's useState hook to manage the state of the tasks. Overall, it is a great introductory project for someone looking to learn React.",
+      },
+    },
+    {
+      params: { projects: "tron" },
+      props: {
+        name: "Tron",
+        desc: "The project is a simple 'To-Do List' application built using React. Users can add, edit, and delete tasks from the list. The application is built using a single component that handles the rendering of the list and the form for adding new tasks. The component uses React's useState hook to manage the state of the tasks. Overall, it is a great introductory project for someone looking to learn React.",
+      },
+    },
+    {
+      params: { projects: "crown1" },
+      props: {
+        name: "Crown1",
+        desc: "The project is a simple 'To-Do List' application built using React. Users can add, edit, and delete tasks from the list. The application is built using a single component that handles the rendering of the list and the form for adding new tasks. The component uses React's useState hook to manage the state of the tasks. Overall, it is a great introductory project for someone looking to learn React.",
+      },
+    },
+    {
+      params: { projects: "snowgod1" },
+      props: {
+        name: "Snowgod1",
+        desc: "The project is a simple 'To-Do List' application built using React. Users can add, edit, and delete tasks from the list. The application is built using a single component that handles the rendering of the list and the form for adding new tasks. The component uses React's useState hook to manage the state of the tasks. Overall, it is a great introductory project for someone looking to learn React.",
+      },
+    },
+    {
+      params: { projects: "godfire1" },
+      props: {
+        name: "Godfire1",
+        desc: "The project is a simple 'To-Do List' application built using React. Users can add, edit, and delete tasks from the list. The application is built using a single component that handles the rendering of the list and the form for adding new tasks. The component uses React's useState hook to manage the state of the tasks. Overall, it is a great introductory project for someone looking to learn React.",
+      },
+    },
+    {
+      params: { projects: "tron1" },
+      props: {
+        name: "Tron1",
+        desc: "The project is a simple 'To-Do List' application built using React. Users can add, edit, and delete tasks from the list. The application is built using a single component that handles the rendering of the list and the form for adding new tasks. The component uses React's useState hook to manage the state of the tasks. Overall, it is a great introductory project for someone looking to learn React.",
+      },
+    },
+    {
+      params: { projects: "crown2" },
+      props: {
+        name: "Crown2",
+        desc: "The project is a simple 'To-Do List' application built using React. Users can add, edit, and delete tasks from the list. The application is built using a single component that handles the rendering of the list and the form for adding new tasks. The component uses React's useState hook to manage the state of the tasks. Overall, it is a great introductory project for someone looking to learn React.",
+      },
+    },
+    {
+      params: { projects: "snowgod2" },
+      props: {
+        name: "Snowgod2",
+        desc: "The project is a simple 'To-Do List' application built using React. Users can add, edit, and delete tasks from the list. The application is built using a single component that handles the rendering of the list and the form for adding new tasks. The component uses React's useState hook to manage the state of the tasks. Overall, it is a great introductory project for someone looking to learn React.",
+      },
+    },
+    {
+      params: { projects: "godfire2" },
+      props: {
+        name: "Godfire2",
+        desc: "The project is a simple 'To-Do List' application built using React. Users can add, edit, and delete tasks from the list. The application is built using a single component that handles the rendering of the list and the form for adding new tasks. The component uses React's useState hook to manage the state of the tasks. Overall, it is a great introductory project for someone looking to learn React.",
+      },
+    },
+    {
+      params: { projects: "tron2" },
+      props: {
+        name: "Tron2",
+        desc: "The project is a simple 'To-Do List' application built using React. Users can add, edit, and delete tasks from the list. The application is built using a single component that handles the rendering of the list and the form for adding new tasks. The component uses React's useState hook to manage the state of the tasks. Overall, it is a great introductory project for someone looking to learn React.",
+      },
+    },
+  ];
+}
+
+const { projects } = Astro.params;
+const { name, desc } = Astro.props;
+---
+
+<MainLayout>
+  <section class="mx-auto px-4 mb-8 mt-4 lg:mt-8 w-full lg:max-w-3xl">
+    <h1 class="font-semibold text-lg my-4 px-4 py-2.5 bg-gray-600/70 w-fit rounded-md">Ai Artwork : {name}</h1>
+    <img
+      src=`/images/${projects}.jpeg`
+      class="rounded my-10 drop-shadow-[0px_0px_20px_rgba(155,155,155,1)] w-full h-[300px] lg:h-[450px] bg-slate-800 object-cover"
+    />
+    <p>{desc}</p>
+    <section></section>
+  </section>
+</MainLayout>
